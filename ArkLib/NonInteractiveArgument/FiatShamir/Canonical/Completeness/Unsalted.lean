@@ -5,7 +5,7 @@ Authors: Quang Dao
 -/
 module
 
-public import ArkLib.OracleReduction.FiatShamir.Basic
+public import ArkLib.NonInteractiveArgument.FiatShamir.Basic
 public import ArkLib.OracleReduction.Security.RbrGame
 public import VCVio.OracleComp.QueryTracking.RandomOracle.Basic
 

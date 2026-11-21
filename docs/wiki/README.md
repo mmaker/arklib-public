@@ -30,6 +30,7 @@ For reusable cross-cutting workflows that are not tied to one repo area, see
   batching, shared protocol and opening contracts for a consumer.
 - [`sequential-composition.md`](sequential-composition.md) - legacy theorem selection for shared-state
   execution, completeness, and round-by-round soundness.
+- [`fiat-shamir.md`](fiat-shamir.md) - single-salt parameters, canonical constructors and security.
 - [`probability-conventions.md`](probability-conventions.md) - namespace and export conventions
   for reusable helpers in `ArkLib/Data/Probability/`.
 - [`porting-conventions.md`](porting-conventions.md) - where port history lives, naming and
