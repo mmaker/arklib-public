@@ -5,7 +5,7 @@ Authors: Quang Dao
 -/
 module
 
-public import ArkLib.OracleReduction.FiatShamir.Basic
+public import ArkLib.NonInteractiveArgument.FiatShamir.Basic
 public import ArkLib.OracleReduction.Security.RbrGame
 public import VCVio.OracleComp.QueryTracking.RandomOracle.Basic
 
@@ -745,7 +745,6 @@ theorem fiatShamir_completeness_randomOracle
   · rfl
   · exact isEmptyElim q.1
 
--- TODO: state-restoration (knowledge) soundness implies (knowledge) soundness after Fiat-Shamir
 
 end
 
