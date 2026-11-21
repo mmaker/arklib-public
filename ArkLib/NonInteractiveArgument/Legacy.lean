@@ -5,7 +5,7 @@ Authors: Yuxi Zheng, Chung Thai Nguyen, Michele Orrù
 -/
 module
 
-public import ArkLib.NonInteractiveArgument.NARG
+public import ArkLib.NonInteractiveArgument.Soundness
 public import ArkLib.OracleReduction.Security.Basic
 public import ArkLib.NonInteractiveArgument.ZeroKnowledge
 

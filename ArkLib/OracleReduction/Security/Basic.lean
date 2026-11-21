@@ -7,7 +7,7 @@ module
 
 public import ArkLib.OracleReduction.Execution
 public import ArkLib.Security.Game
-public import ArkLib.NonInteractiveArgument.NARG
+public import ArkLib.NonInteractiveArgument.Soundness
 public import VCVio.OracleComp.QueryTracking.QueryBound.Basic
 
 /-!
