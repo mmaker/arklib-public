@@ -4,6 +4,17 @@ As in~\cite[Section~9.1]{snarg-book}, let \(\secpar\in\mathbb N\) be a security 
 
 Write \(\OracleFamily\) for the public oracles specified by the NARG's model. For DSFS these are the sampled hash function, permutation and inverse \((\SpongeOracles)\leftarrow\SpongeOracleDistribution\); for basic Fiat--Shamir they are the independent round functions \((\OracleFunction_i)_i\). These are the only public oracles in the experiment. An assignment \(z\leftarrow A^{\OracleFamily}\) means run \(A\) with query access to these oracles. The prover and verifier use the same initialized public-oracle state, continuing that state between their executions when the specified model is stateful. The prover and verifier are probabilistic algorithms with independent private randomness. We write \(b=1\) for acceptance; rejection or an absent returned bit does not satisfy this event. The symbol \(\bot\) denotes a missing output or witness; by convention, \((\Instance,\bot)\notin\Relation\) for every statement \(\Instance\) and witness relation \(\Relation\). In the probability displays below, the left column states the event and the right column specifies the experiment; the separator does not denote conditioning. Probabilities include the oracle initialization and the algorithms' private randomness.
 
+\begin{remark}[Honest argument interface]
+\label{rem:honest_argument_interface}
+The honest argument interface bundles a prover that generates a NARG string from a statement
+and witness, and a Boolean verifier of that statement and string. Its execution runs both
+algorithms in the same oracle environment. Completeness requires acceptance with probability
+at least one minus the stated error for every valid statement and witness. Adaptive security
+uses the separate verifier and experiment interfaces below.
+\lean{NonInteractiveArgument, NonInteractiveArgument.run, NonInteractiveArgument.completeness}
+\leanok
+\end{remark}
+
 \begin{definition}[Adaptive NARG soundness {\cite[Definition~3.5]{CO25}~\cite[Definition~7.1.4]{snarg-book}}]
   \label{def:narg_adaptive_soundness}
   Let \(\NARGVerifier\) be a NARG verifier for relation \(\Relation\), with oracle distribution \(\OracleDistribution\). The NARG has \emph{adaptive soundness error} \(\NARGSoundnessError:\mathbb N^3\to[0,\infty]\) if, for every security parameter \(\secpar\in\mathbb N\), instance-size bound \(\InstanceSizeBound\in\mathbb N\), query budget \(\PublicOracleQueryBound\in\mathbb N\), and \(\PublicOracleQueryBound\)-query malicious argument prover \(\NARGMaliciousProver\) (\Cref{def:counted_queries}),

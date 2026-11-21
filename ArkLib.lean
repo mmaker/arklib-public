@@ -763,10 +763,12 @@ public import ArkLib.Interaction.Oracle.TypeTree.Decoration
 public import ArkLib.Interaction.Oracle.Virtual
 public import ArkLib.Interaction.Oracle.WorldSegments
 public import ArkLib.Interaction.Reduction
+public import ArkLib.InteractiveProof.IP
 public import ArkLib.InteractiveProof.Soundness
 public import ArkLib.InteractiveProof.StateRestorationSoundness
 public import ArkLib.InteractiveProof.ZeroKnowledge
 public import ArkLib.NonInteractiveArgument.Legacy
+public import ArkLib.NonInteractiveArgument.NARG
 public import ArkLib.NonInteractiveArgument.Soundness
 public import ArkLib.NonInteractiveArgument.ZeroKnowledge
 public import ArkLib.OracleReduction.BCS.Basic

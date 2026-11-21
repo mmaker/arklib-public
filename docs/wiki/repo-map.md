@@ -82,15 +82,17 @@ home_page/            site assets and assembled website root
   Core transcript operations live in `ProtocolSpec/Basic.lean`. Message and challenge prefix
   lemmas live in `ProtocolSpec/PrefixLemmas.lean`;
   round and optional-run factorization lemmas live in `Execution.lean`.
-- `ArkLib/InteractiveProof/` owns adaptive interactive security
+- `ArkLib/InteractiveProof/` owns the honest protocol interface (`IP.lean`),
+  adaptive interactive security
   (`Soundness.lean`), state-restoration security and its private-coin preservation lemmas
   and the `IP` contracts (`StateRestorationSoundness.lean`), and honest-verifier zero knowledge.
   These modules still use
   the legacy `ProtocolSpec`, `Prover`, and `Verifier` types; moving their ownership does not
   port their execution to the interaction layer.
-- `ArkLib/NonInteractiveArgument/Soundness.lean` defines a verifier on a statement and proof string directly,
+- `ArkLib/NonInteractiveArgument/NARG.lean` owns honest argument generation, verification,
+  and completeness. `Soundness.lean` defines a verifier on a statement and proof string directly,
   adaptive soundness, knowledge soundness, and statement-size restrictions. `ZeroKnowledge.lean`
-  defines the two-stage adaptive simulation games. Neither core module imports either
+  defines the two-stage adaptive simulation games. These core modules import neither
   interaction layer. `Legacy.lean` converts legacy one-message verifiers/provers and
   proves the experiment and predicate equivalences, and transports the legacy NARG experiments
   across private-sampling adapters.

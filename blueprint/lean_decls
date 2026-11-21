@@ -29,6 +29,12 @@ OracleVerifier.toVerifier
 Reduction
 OracleReduction
 IP.Verifier
+InteractiveProver
+InteractiveVerifier
+InteractiveProtocol
+InteractiveProtocol.run
+InteractiveProtocol.completeness
+InteractiveProtocol.toReduction_completeness_iff
 Prover.runToRound
 Prover.processRound
 Prover.run
@@ -104,6 +110,9 @@ Interaction.Oracle.Security.StateRestoration.stateRestoration_oracle_knowledge_s
 Interaction.Oracle.Security.MeasuredKnowledgeCertificate.stateRestoration_oracle_knowledge_soundness_nonuniform
 OracleComp.publicQuerySelector
 Verifier.StateRestoration.isSrChallengeMove
+NonInteractiveArgument
+NonInteractiveArgument.run
+NonInteractiveArgument.completeness
 NARG.adaptiveSoundness
 NARG.soundnessFailureEventSizeBounded
 NARG.soundnessExperiment

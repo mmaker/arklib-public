@@ -405,6 +405,18 @@ The general reduction interfaces remain available internally.
 \leanok
 \end{definition}
 
+\begin{remark}[Honest protocol interface]
+\label{rem:honest_protocol_interface}
+The general honest interface bundles a stateful prover and a Boolean transcript verifier,
+with an explicit ambient oracle interface. Its execution returns the verifier's decision;
+its completeness predicate requires acceptance with probability at least one minus the
+stated error on every valid statement and witness. The adapter to the reduction interface
+preserves this completeness predicate.
+\lean{InteractiveProver, InteractiveVerifier, InteractiveProtocol, InteractiveProtocol.run,
+  InteractiveProtocol.completeness, InteractiveProtocol.toReduction_completeness_iff}
+\leanok
+\end{remark}
+
 \paragraph{Transcript notation.}
 A full transcript (\Cref{def:transcript}) records both parties'
 messages in protocol order. Let \(\IPProverPositions\) and \(\IPVerifierPositions\) be the prover- and verifier-message
